@@ -1,11 +1,7 @@
-// build your `Project` model here
-// do your sql stuff here and bring in db-config
-
 const db = require("../../data/dbConfig");
 
-// get all projects
 async function getProjects() {
-  const projRow = await db("projects as p").select("*");
+  const projRow = await db("projects").select("*");
 
   const project = projRow.map((proj) => {
     return {
@@ -19,9 +15,21 @@ async function getProjects() {
   return project;
 }
 
-// post a new project
-// write the SQL code first
-/**
- *
- */
-module.exports = { getProjects };
+function createProject(proj) {
+  return db("projects")
+    .insert(proj)
+    .then(([project_id]) => {
+      return db("projects")
+        .where("project_id", project_id)
+        .first()
+        .then((newProj) => {
+          return {
+            project_id: newProj.project_id,
+            project_name: newProj.project_name,
+            project_description: newProj.project_description,
+            project_completed: newProj.project_completed === 0 ? false : true,
+          };
+        });
+    });
+}
+module.exports = { getProjects, createProject };

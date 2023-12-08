@@ -115,9 +115,9 @@ Build an API inside the `api` folder with endpoints for:
 [x] [2] each project contains project_name, project_description and project_completed (as a boolean) (9 ms)
 
 ## [POST] /api/projects
-[ ] [3] can add a new project to the table (4 ms)
-[ ] [4] responds with the newly created project with its project_completed as a boolean (5 ms)
-[ ] [5] rejects projects lacking a project_name with an error status code (6 ms)
+[x] [3] can add a new project to the table (4 ms)
+[x] [4] responds with the newly created project with its project_completed as a boolean (5 ms)
+[x] [5] rejects projects lacking a project_name with an error status code (6 ms)
 
 
 * RESOURCES ENDPOINTS
