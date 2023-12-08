@@ -1,9 +1,3 @@
-// build your `/api/resources` router here
-// define router
-// bring in model
-
-//write your endpoints
-
 const resourcesRouter = require("express").Router();
 const Resource = require("./model");
 

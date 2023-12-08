@@ -39,7 +39,18 @@ async function getTasks() {
     )
     .leftJoin("projects as p", "p.project_id", "t.project_id");
 
-  return taskRow;
+  const tasks = taskRow.map((task) => {
+    return {
+      task_id: task.task_id,
+      task_description: task.task_description,
+      task_notes: task.task_notes,
+      task_completed: task.task_completed === 0 ? false : true,
+      project_name: task.project_name,
+      project_description: task.project_description,
+    };
+  });
+
+  return tasks;
 }
 
 // post a new task

@@ -3,7 +3,7 @@ const db = require("../../data/dbConfig");
 async function getProjects() {
   const projRow = await db("projects").select("*");
 
-  const project = projRow.map((proj) => {
+  const projects = projRow.map((proj) => {
     return {
       project_id: proj.project_id,
       project_name: proj.project_name,
@@ -12,7 +12,7 @@ async function getProjects() {
     };
   });
 
-  return project;
+  return projects;
 }
 
 function createProject(proj) {

@@ -89,7 +89,7 @@ Build an API inside the `api` folder with endpoints for:
   - Even though `task_completed` is stored as an integer, the API uses booleans when interacting with the client
   - Example of response body: `{"task_id":1,"task_description":"baz","task_notes":null,"task_completed":false,"project_id:1}`
 
-- [ ] `[GET] /api/tasks`
+- [x] `[GET] /api/tasks`
   - Even though `task_completed` is stored as an integer, the API uses booleans when interacting with the client
   - Each task must include `project_name` and `project_description`
   - Example of response body: `[{"task_id":1,"task_description":"baz","task_notes":null,"task_completed":false,"project_name:"bar","project_description":null}]`
@@ -134,7 +134,7 @@ Build an API inside the `api` folder with endpoints for:
 * TASKS ENDPOINTS
 ## [GET] /api/tasks
 [x] [10] can get all tasks in the table (4 ms)
-[ ] [11] each task contains task_notes and task_description and task_completed (as a boolean) (7 ms)
+[x] [11] each task contains task_notes and task_description and task_completed (as a boolean) (7 ms)
 [x] [12] each task contains the project_name and the project_description (4 ms)
 
 ## [POST] /api/tasks
