@@ -5,13 +5,7 @@ const db = require("../../data/dbConfig");
 
 // get all projects
 async function getProjects() {
-  const projRow = await db("projects as p")
-    // write the sql code first
-    /**
-     * Select *
-     * From projects as p
-     */
-    .select("*");
+  const projRow = await db("projects as p").select("*");
 
   const project = projRow.map((proj) => {
     return {
