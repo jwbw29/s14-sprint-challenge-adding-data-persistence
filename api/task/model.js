@@ -4,9 +4,53 @@
 const db = require("../../data/dbConfig");
 
 // get all tasks
+// Example Response:
+// `[
+//     {
+//         "task_id":1,
+//         "task_description":"baz",
+//         "task_notes":null,
+//         "task_completed":false,
+//         "project_name:"bar",
+//         "project_description":null
+//     }
+// ]`
 
+// select
+//     task_id,
+//     task_description,
+//     task_notes,
+//     task_completed,
+//     p.project_name,
+//     p.project_description
+// from tasks as t
+// left join projects as p
+//     on p.project_id = t.project_id
 
+async function getTasks() {
+  const taskRow = await db("tasks as t")
+    .select(
+      "task_id",
+      "task_description",
+      "task_notes",
+      "task_completed",
+      "p.project_name",
+      "p.project_description"
+    )
+    .leftJoin("projects as p", "p.project_id", "t.project_id");
+
+  return taskRow;
+}
 
 // post a new task
+//Example response:
+// `{
+//     "task_id":1,
+//     "task_description":"baz",
+//     "task_notes":null,
+//     "task_completed":false,
+//     "project_id":1
+// }`
+function createTask(task) {}
 
-module.exports = {};
+module.exports = { getTasks, createTask };

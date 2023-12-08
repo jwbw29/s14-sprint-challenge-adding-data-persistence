@@ -133,15 +133,15 @@ Build an API inside the `api` folder with endpoints for:
 
 * TASKS ENDPOINTS
 ## [GET] /api/tasks
-[ ] [10] can get all tasks in the table (4 ms)
+[x] [10] can get all tasks in the table (4 ms)
 [ ] [11] each task contains task_notes and task_description and task_completed (as a boolean) (7 ms)
-[ ] [12] each task contains the project_name and the project_description (4 ms)
+[x] [12] each task contains the project_name and the project_description (4 ms)
 
 ## [POST] /api/tasks
 [ ] [13] can add a new task to the db (4 ms)
 [ ] [14] responds with the newly created task with the task_completed as a boolean (5 ms)
-[ ] [15] rejects a task lacking a task_description with an error status code (6 ms)
-[ ] [16] rejects a task lacking a project_id with an error status code (4 ms)
-[ ] [17] rejects a task containing an invalid project_id with an error status code (4 ms)
+[x] [15] rejects a task lacking a task_description with an error status code (6 ms)
+[x] [16] rejects a task lacking a project_id with an error status code (4 ms)
+[x] [17] rejects a task containing an invalid project_id with an error status code (4 ms)
 
 -->
