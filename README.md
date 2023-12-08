@@ -20,7 +20,7 @@ In this project you will be given a set of requirements and must design a databa
 ### Files to Complete
 
 - [x] `package.json`
-- [ ] `index.js`
+- [x] `index.js`
 - [ ] `api/server.js`
 - [ ] `model.js` inside `api/project`, `api/resource` and `api/task`
 - [ ] `router.js` inside `api/project`, `api/resource` and `api/task`
