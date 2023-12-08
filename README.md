@@ -66,11 +66,11 @@ Build the migration(s) in Knex inside the `data/migrations` folder using appropr
 
 Build an API inside the `api` folder with endpoints for:
 
-- [ ] `[POST] /api/resources`
+- [x] `[POST] /api/resources`
 
   - Example of response body: `{"resource_id":1,"resource_name":"foo","resource_description":null}`
 
-- [ ] `[GET] /api/resources`
+- [x] `[GET] /api/resources`
 
   - Example of response body: `[{"resource_id":1,"resource_name":"foo","resource_description":null}]`
 
@@ -122,13 +122,13 @@ Build an API inside the `api` folder with endpoints for:
 
 * RESOURCES ENDPOINTS
 ## [GET] /api/resources
-[ ] [6] can get all resources in the table (5 ms)
+[x] [6] can get all resources in the table (5 ms)
 
 ## [POST] /api/resources
 
-[ ] [7] can add a new resource to the table (3 ms)
-[ ] [8] responds with the newly created resource (6 ms)
-[ ] [9] rejects a resource with an existing resource_name with an error status code (5 ms)
+[x] [7] can add a new resource to the table (3 ms)
+[x] [8] responds with the newly created resource (6 ms)
+[x] [9] rejects a resource with an existing resource_name with an error status code (5 ms)
 
 
 * TASKS ENDPOINTS
