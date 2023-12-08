@@ -67,20 +67,25 @@ Build the migration(s) in Knex inside the `data/migrations` folder using appropr
 Build an API inside the `api` folder with endpoints for:
 
 - [ ] `[POST] /api/resources`
+
   - Example of response body: `{"resource_id":1,"resource_name":"foo","resource_description":null}`
 
 - [ ] `[GET] /api/resources`
+
   - Example of response body: `[{"resource_id":1,"resource_name":"foo","resource_description":null}]`
 
 - [ ] `[POST] /api/projects`
+
   - Even though `project_completed` is stored as an integer, the API uses booleans when interacting with the client
   - Example of response body: `{"project_id":1,"project_name":"bar","project_description":null,"project_completed":false}`
 
 - [ ] `[GET] /api/projects`
+
   - Even though `project_completed` is stored as an integer, the API uses booleans when interacting with the client
   - Example of response body: `[{"project_id":1,"project_name":"bar","project_description":null,"project_completed":false}]`
 
 - [ ] `[POST] /api/tasks`
+
   - Even though `task_completed` is stored as an integer, the API uses booleans when interacting with the client
   - Example of response body: `{"task_id":1,"task_description":"baz","task_notes":null,"task_completed":false,"project_id:1}`
 
@@ -97,3 +102,46 @@ Build an API inside the `api` folder with endpoints for:
 - Delete `test.db3` and `database.db3` and re-run migrations and tests, if you suspect half-finished code left your databases in a broken state.
 - In your solution, it is essential that you follow best practices and produce clean and professional results.
 - Schedule time to review, refine, and assess your work and perform basic professional polishing.
+
+<!--
+# TESTS
+
+[x] [0] sanity check (56 ms)
+    - server.js
+
+* PROJECTS ENDPOINTS
+## [GET] /api/projects
+[ ] [1] can get all projects that exist in the table (8 ms)
+[ ] [2] each project contains project_name, project_description and project_completed (as a boolean) (9 ms)
+
+## [POST] /api/projects
+[ ] [3] can add a new project to the table (4 ms)
+[ ] [4] responds with the newly created project with its project_completed as a boolean (5 ms)
+[ ] [5] rejects projects lacking a project_name with an error status code (6 ms)
+
+
+* RESOURCES ENDPOINTS
+## [GET] /api/resources
+[ ] [6] can get all resources in the table (5 ms)
+
+## [POST] /api/resources
+
+[ ] [7] can add a new resource to the table (3 ms)
+[ ] [8] responds with the newly created resource (6 ms)
+[ ] [9] rejects a resource with an existing resource_name with an error status code (5 ms)
+
+
+* TASKS ENDPOINTS
+## [GET] /api/tasks
+[ ] [10] can get all tasks in the table (4 ms)
+[ ] [11] each task contains task_notes and task_description and task_completed (as a boolean) (7 ms)
+[ ] [12] each task contains the project_name and the project_description (4 ms)
+
+## [POST] /api/tasks
+[ ] [13] can add a new task to the db (4 ms)
+[ ] [14] responds with the newly created task with the task_completed as a boolean (5 ms)
+[ ] [15] rejects a task lacking a task_description with an error status code (6 ms)
+[ ] [16] rejects a task lacking a project_id with an error status code (4 ms)
+[ ] [17] rejects a task containing an invalid project_id with an error status code (4 ms)
+
+-->
