@@ -79,7 +79,7 @@ Build an API inside the `api` folder with endpoints for:
   - Even though `project_completed` is stored as an integer, the API uses booleans when interacting with the client
   - Example of response body: `{"project_id":1,"project_name":"bar","project_description":null,"project_completed":false}`
 
-- [ ] `[GET] /api/projects`
+- [x] `[GET] /api/projects`
 
   - Even though `project_completed` is stored as an integer, the API uses booleans when interacting with the client
   - Example of response body: `[{"project_id":1,"project_name":"bar","project_description":null,"project_completed":false}]`
@@ -111,8 +111,8 @@ Build an API inside the `api` folder with endpoints for:
 
 * PROJECTS ENDPOINTS
 ## [GET] /api/projects
-[ ] [1] can get all projects that exist in the table (8 ms)
-[ ] [2] each project contains project_name, project_description and project_completed (as a boolean) (9 ms)
+[x] [1] can get all projects that exist in the table (8 ms)
+[x] [2] each project contains project_name, project_description and project_completed (as a boolean) (9 ms)
 
 ## [POST] /api/projects
 [ ] [3] can add a new project to the table (4 ms)

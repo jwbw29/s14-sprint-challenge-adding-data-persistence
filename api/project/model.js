@@ -12,7 +12,17 @@ async function getProjects() {
      * From projects as p
      */
     .select("*");
-  return projRow;
+
+  const project = projRow.map((proj) => {
+    return {
+      project_id: proj.project_id,
+      project_name: proj.project_name,
+      project_description: proj.project_description,
+      project_completed: proj.project_completed === 0 ? false : true,
+    };
+  });
+
+  return project;
 }
 
 // post a new project
