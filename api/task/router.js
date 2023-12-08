@@ -16,9 +16,11 @@ tasksRouter.get("/", (req, res, next) => {
 });
 
 tasksRouter.post("/", (req, res, next) => {
-  Task.createTask(req.body).then((newTask) => {
-    res.status(201).json(newTask);
-  });
+  Task.createTask(req.body)
+    .then((newTask) => {
+      res.status(201).json(newTask);
+    })
+    .catch(next);
 });
 
 // eslint-disable-next-line no-unused-vars

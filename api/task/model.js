@@ -62,6 +62,23 @@ async function getTasks() {
 //     "task_completed":false,
 //     "project_id":1
 // }`
-function createTask(task) {}
+function createTask(task) {
+  return db("tasks")
+    .insert(task)
+    .then(([task_id]) => {
+      return db("tasks")
+        .where("task_id", task_id)
+        .first()
+        .then((newTask) => {
+          return {
+            task_id: newTask.task_id,
+            task_description: newTask.task_description,
+            task_notes: newTask.task_notes,
+            task_completed: newTask.task_completed === 0 ? false : true,
+            project_id: newTask.project_id,
+          };
+        });
+    });
+}
 
 module.exports = { getTasks, createTask };

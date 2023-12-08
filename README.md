@@ -138,7 +138,7 @@ Build an API inside the `api` folder with endpoints for:
 [x] [12] each task contains the project_name and the project_description (4 ms)
 
 ## [POST] /api/tasks
-[ ] [13] can add a new task to the db (4 ms)
+[x] [13] can add a new task to the db (4 ms)
 [ ] [14] responds with the newly created task with the task_completed as a boolean (5 ms)
 [x] [15] rejects a task lacking a task_description with an error status code (6 ms)
 [x] [16] rejects a task lacking a project_id with an error status code (4 ms)
