@@ -1,9 +1,3 @@
-// build your `/api/projects` router here
-// define router
-// bring in model
-
-//write your endpoints
-
 const projectsRouter = require("express").Router();
 const Project = require("./model");
 

@@ -22,9 +22,9 @@ In this project you will be given a set of requirements and must design a databa
 - [x] `package.json`
 - [x] `index.js`
 - [x] `api/server.js`
-- [ ] `model.js` inside `api/project`, `api/resource` and `api/task`
-- [ ] `router.js` inside `api/project`, `api/resource` and `api/task`
-- [ ] migration file(s)
+- [x] `model.js` inside `api/project`, `api/resource` and `api/task`
+- [x] `router.js` inside `api/project`, `api/resource` and `api/task`
+- [x] migration file(s)
 - [x] seed file(s) **optional**
 
 ### Required Dependencies
@@ -84,7 +84,7 @@ Build an API inside the `api` folder with endpoints for:
   - Even though `project_completed` is stored as an integer, the API uses booleans when interacting with the client
   - Example of response body: `[{"project_id":1,"project_name":"bar","project_description":null,"project_completed":false}]`
 
-- [ ] `[POST] /api/tasks`
+- [x] `[POST] /api/tasks`
 
   - Even though `task_completed` is stored as an integer, the API uses booleans when interacting with the client
   - Example of response body: `{"task_id":1,"task_description":"baz","task_notes":null,"task_completed":false,"project_id:1}`
@@ -139,7 +139,7 @@ Build an API inside the `api` folder with endpoints for:
 
 ## [POST] /api/tasks
 [x] [13] can add a new task to the db (4 ms)
-[ ] [14] responds with the newly created task with the task_completed as a boolean (5 ms)
+[x] [14] responds with the newly created task with the task_completed as a boolean (5 ms)
 [x] [15] rejects a task lacking a task_description with an error status code (6 ms)
 [x] [16] rejects a task lacking a project_id with an error status code (4 ms)
 [x] [17] rejects a task containing an invalid project_id with an error status code (4 ms)
