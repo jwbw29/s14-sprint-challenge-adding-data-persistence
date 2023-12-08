@@ -1,1 +1,27 @@
 // build your `/api/projects` router here
+// define router
+// bring in model
+
+//write your endpoints
+
+const projectsRouter = require("express").Router();
+const Project = require("./model");
+
+projectsRouter.get("/", (req, res, next) => {
+  Project.getProjects()
+    .then((projects) => {
+      res.status(200).json(projects);
+    })
+    .catch(next);
+});
+
+// eslint-disable-next-line no-unused-vars
+projectsRouter.use((err, req, res, next) => {
+  res.status(500).json({
+    customMessage: "Something went wrong in the PROJECT ROUTER",
+    message: err.message,
+    stack: err.stack,
+  });
+});
+
+module.exports = projectsRouter;

@@ -21,7 +21,7 @@ In this project you will be given a set of requirements and must design a databa
 
 - [x] `package.json`
 - [x] `index.js`
-- [ ] `api/server.js`
+- [x] `api/server.js`
 - [ ] `model.js` inside `api/project`, `api/resource` and `api/task`
 - [ ] `router.js` inside `api/project`, `api/resource` and `api/task`
 - [ ] migration file(s)
